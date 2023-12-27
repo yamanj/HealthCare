@@ -5,15 +5,17 @@ import java.util.Date;
 public class Appointment {
 	private Date dateTime;
 	private Patient patient;
-	private Doctor doc;
 	
-	public Appointment(Patient p,Doctor d,Date date) {
+	
+	public Appointment(Patient p,Date date) {
 		this.patient = p;
-		this.doc = d;
 		this.dateTime = date;
 		
 	}
 	
-	
+	public Appointment (Date  date) {
+		
+		this.dateTime = date;
+	}
 
 }

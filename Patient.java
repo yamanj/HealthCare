@@ -6,43 +6,43 @@ import java.util.Date;
 //import java.util.ArrayList;
 
 public class Patient {
-	private String name;
+	private String firstname;
+	private String lastname;
 	private int age;
 	private String address;
+	private String city;
+	private String state;
 	private String phone;
-	private String diseases;
 	private ArrayList <Appointment> appointments= new ArrayList <Appointment>();
 
-	//private ArrayList<Disease> diseases=new ArrayList<Disease>();
 	
-	public Patient (String name,int age,String address,String phone) {
-		this.name = name;
+	public Patient (String fname,String lname,int age,String address,String city,String state,String phone) {
+		this.firstname = fname;
+		this.lastname = lname;
 		this.age = age;
 		this.address = address;
+		this.city = city;
+		this.state = state;
 		this.phone = phone;
 		
 	}
 	
-	public Patient(String name,int age) {
-		this.name = name;
+	public Patient(String fname,String lname,int age) {
+		this.firstname = fname;
+		this.lastname = lname;
 		this.age = age;
 	}
 	
-	public void addAddress(String addr) {
+	public void addAddress(String addr,String city,String state) {
 		this.address = addr;
+		this.city = city;
+		this.state = state;
 	}
 	
 	public void addPhone(String phone) {
 		this.phone =  phone;
 	}
 	
-	public String getDiseases (){
-		return diseases;
-	}
-	
-	public void addDisease(String disDescrp) {
-		this.diseases = disDescrp;
-	}
 	
 	public ArrayList getAppointmentList(){
 		return this.appointments;
